@@ -15,7 +15,7 @@ public class AutodeployApplicationTests {
 	@Test
 	public void contextLoads() {
 		TeTesten one = new TeTesten();
-		Assert.assertEquals(one.returnOne(), 2);
+		Assert.assertEquals(one.returnOne(), 1);
 	}
 
 }

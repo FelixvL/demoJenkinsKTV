@@ -4,7 +4,7 @@ pipeline {
       image 'maven:3-alpine'
       args '-v /root/.m2:/root/.m2'
     }
-    
+
   }
   stages {
     stage('Build') {
@@ -19,15 +19,16 @@ pipeline {
       post {
         always {
           junit 'target/surefire-reports/*.xml'
-          
+
         }
-        
+
       }
     }
     stage('Deploy') {
       steps {
         echo '$SERVER_PORT'
         sh 'echo $SERVER_PORT'
+        sh 'touch /home/this_was_created_by_jenkins'
       }
     }
   }

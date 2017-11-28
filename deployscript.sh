@@ -66,6 +66,9 @@ function deleteFiles(){
 }
 
 function copyFiles(){
+    # Create target directories if they do not exit
+    mkdir -p $destAbsPath
+
     echo "Copying files from $sourFile"
     cp $sourFile $destFile
 

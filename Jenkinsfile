@@ -26,6 +26,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
+        sh 'ls -la'
         sh './deployscript.sh'
       }
     }

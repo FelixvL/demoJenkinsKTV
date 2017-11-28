@@ -27,6 +27,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo '$SERVER_PORT'
+        sh 'echo $SERVER_PORT'
       }
     }
   }

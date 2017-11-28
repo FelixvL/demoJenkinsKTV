@@ -82,7 +82,7 @@ function run(){
 
    #echo "java -jar $destFile --server.port=$serverPort $properties" | at now + 1 minutes
 
-   nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
+   nohup nice java -war $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
 
    echo "COMMAND: nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &"
 
@@ -118,17 +118,17 @@ function watch(){
 # BUILD_ID=dontKillMe /path/to/this/file/api-deploy.sh dev 8082 spring-boot application-localhost.yml
 
 # 1 - stop server on port ...
-# stopServer
+stopServer
 
 # 2 - delete destinations folder content
-# deleteFiles
+deleteFiles
 
 # 3 - copy files to deploy dir
 copyFiles
 changeFilePermission
 
 # 4 - start server
-# run
+run
 
 # 5 - watch loading messages until  ($whatToFind) message is found
-# watch
+watch

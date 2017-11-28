@@ -82,7 +82,7 @@ function run(){
 
    #echo "java -jar $destFile --server.port=$serverPort $properties" | at now + 1 minutes
 
-   nohup nice java -war $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
+   nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &
 
    echo "COMMAND: nohup nice java -jar $destFile --server.port=$serverPort $properties $> $dstLogFile 2>&1 &"
 

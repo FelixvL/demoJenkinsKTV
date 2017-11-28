@@ -26,9 +26,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        echo '$SERVER_PORT'
-        sh 'echo $SERVER_PORT'
-        sh 'touch /home/this_was_created_by_jenkins'
+        sh 'deployscript.sh'
       }
     }
   }

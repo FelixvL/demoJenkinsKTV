@@ -5,6 +5,10 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+    
+    evironment {
+        SERVER_PORT = '8081'   
+    }
     stages {
         stage('Build') {
             steps {

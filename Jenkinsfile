@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'mvn spring-boot:run' 
+                echo $SERVER_PORT
             }
         }
     }

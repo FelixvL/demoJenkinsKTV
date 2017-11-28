@@ -26,8 +26,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'pwd'
-        sh 'ls -l'
+        sh './deployscript.sh'
       }
     }
   }
